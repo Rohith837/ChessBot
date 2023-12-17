@@ -1,0 +1,63 @@
+.fen {
+    margin-top: 2vh;
+    width: min(80vh, 80vw);
+    display: flex;
+    flex-direction: row;
+}
+
+.fen div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fen input {
+    flex: 11;
+    color: whitesmoke;
+    letter-spacing: 0.2px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.playas {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    margin-right: 10px;
+    border: 2px white solid;
+}
+
+.playas:hover {
+    border: 2px black solid;
+}
+
+.data {
+    border-radius: 10%;
+    min-width: 18vw;
+    background-color: #f2f2f2;
+    color: #232323;
+    padding: 20px;
+}
+
+.data .item div {
+    padding: 2px;
+}
+
+.data button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgba(95, 158, 160, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+.data button:hover {
+    cursor: pointer;
+}
+

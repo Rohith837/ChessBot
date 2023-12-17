@@ -1,0 +1,465 @@
+.chessboard {
+    width: min(80vh, 80vw);
+    height: min(80vh, 80vw);
+    background-image: url("../images/Chessboard480.svg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.piece {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    width: 12.5%;
+    height: 12.5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.grabbing {
+    cursor: grabbing;
+    z-index: 3;
+}
+
+.capture-hint,
+.highlight,
+.hint,
+.think,
+.hover {
+    position: absolute;
+    width: 12.5%;
+    height: 12.5%;
+    top: 0;
+    left: 0;
+}
+
+.highlight {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+.capture-hint {
+    background-color: rgba(27, 172, 166, 0.5);
+}
+
+.think {
+    background-color: rgba(27, 172, 166, 1);
+}
+
+.hint {
+    box-sizing: border-box;
+    background-color: rgba(27, 172, 166, 0.5);
+}
+
+.hover {
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 0px 3px rgb(255, 255, 255);
+    -moz-box-shadow: inset 0px 0px 0px 3px rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 0px 3px rgb(255, 255, 255);
+}
+
+.special {
+    position: absolute;
+    width: 12.5%;
+    height: 50%;
+    background-color: #f5f5f5;
+}
+
+.promotion-piece {
+    width: 100%;
+    height: 25%;
+    position: static;
+    background-size: 100%;
+}
+
+.coordinates {
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.coordinate-light {
+    fill: #779952;
+}
+
+.coordinate-dark {
+    fill: #edeed1;
+}
+
+.coordinate-dark,
+.coordinate-light {
+    font-weight: 600;
+}
+
+.wr {
+    background-image: url('../images/wr.png')
+}
+
+.wn {
+    background-image: url('../images/wn.png')
+}
+
+.wb {
+    background-image: url('../images/wb.png')
+}
+
+.wq {
+    background-image: url('../images/wq.png')
+}
+
+.wk {
+    background-image: url('../images/wk.png')
+}
+
+.wp {
+    background-image: url('../images/wp.png')
+}
+
+.br {
+    background-image: url('../images/br.png')
+}
+
+.bn {
+    background-image: url('../images/bn.png')
+}
+
+.bb {
+    background-image: url('../images/bb.png')
+}
+
+.bq {
+    background-image: url('../images/bq.png')
+}
+
+.bk {
+    background-image: url('../images/bk.png')
+}
+
+.bp {
+    background-image: url('../images/bp.png')
+}
+
+.square-a8,
+.flipped .square-h1 {
+    transform: translateX(0%) translateY(0%)
+}
+
+.square-a7,
+.flipped .square-h2 {
+    transform: translateX(0%) translateY(100%)
+}
+
+.square-a6,
+.flipped .square-h3 {
+    transform: translateX(0%) translateY(200%)
+}
+
+.square-a5,
+.flipped .square-h4 {
+    transform: translateX(0%) translateY(300%)
+}
+
+.square-a4,
+.flipped .square-h5 {
+    transform: translateX(0%) translateY(400%)
+}
+
+.square-a3,
+.flipped .square-h6 {
+    transform: translateX(0%) translateY(500%)
+}
+
+.square-a2,
+.flipped .square-h7 {
+    transform: translateX(0%) translateY(600%)
+}
+
+.square-a1,
+.flipped .square-h8 {
+    transform: translateX(0%) translateY(700%)
+}
+
+.square-b8,
+.flipped .square-g1 {
+    transform: translateX(100%) translateY(0%)
+}
+
+.square-b7,
+.flipped .square-g2 {
+    transform: translateX(100%) translateY(100%)
+}
+
+.square-b6,
+.flipped .square-g3 {
+    transform: translateX(100%) translateY(200%)
+}
+
+.square-b5,
+.flipped .square-g4 {
+    transform: translateX(100%) translateY(300%)
+}
+
+.square-b4,
+.flipped .square-g5 {
+    transform: translateX(100%) translateY(400%)
+}
+
+.square-b3,
+.flipped .square-g6 {
+    transform: translateX(100%) translateY(500%)
+}
+
+.square-b2,
+.flipped .square-g7 {
+    transform: translateX(100%) translateY(600%)
+}
+
+.square-b1,
+.flipped .square-g8 {
+    transform: translateX(100%) translateY(700%)
+}
+
+.square-c8,
+.flipped .square-f1 {
+    transform: translateX(200%) translateY(0%)
+}
+
+.square-c7,
+.flipped .square-f2 {
+    transform: translateX(200%) translateY(100%)
+}
+
+.square-c6,
+.flipped .square-f3 {
+    transform: translateX(200%) translateY(200%)
+}
+
+.square-c5,
+.flipped .square-f4 {
+    transform: translateX(200%) translateY(300%)
+}
+
+.square-c4,
+.flipped .square-f5 {
+    transform: translateX(200%) translateY(400%)
+}
+
+.square-c3,
+.flipped .square-f6 {
+    transform: translateX(200%) translateY(500%)
+}
+
+.square-c2,
+.flipped .square-f7 {
+    transform: translateX(200%) translateY(600%)
+}
+
+.square-c1,
+.flipped .square-f8 {
+    transform: translateX(200%) translateY(700%)
+}
+
+.square-d8,
+.flipped .square-e1 {
+    transform: translateX(300%) translateY(0%)
+}
+
+.square-d7,
+.flipped .square-e2 {
+    transform: translateX(300%) translateY(100%)
+}
+
+.square-d6,
+.flipped .square-e3 {
+    transform: translateX(300%) translateY(200%)
+}
+
+.square-d5,
+.flipped .square-e4 {
+    transform: translateX(300%) translateY(300%)
+}
+
+.square-d4,
+.flipped .square-e5 {
+    transform: translateX(300%) translateY(400%)
+}
+
+.square-d3,
+.flipped .square-e6 {
+    transform: translateX(300%) translateY(500%)
+}
+
+.square-d2,
+.flipped .square-e7 {
+    transform: translateX(300%) translateY(600%)
+}
+
+.square-d1,
+.flipped .square-e8 {
+    transform: translateX(300%) translateY(700%)
+}
+
+.square-e8,
+.flipped .square-d1 {
+    transform: translateX(400%) translateY(0%)
+}
+
+.square-e7,
+.flipped .square-d2 {
+    transform: translateX(400%) translateY(100%)
+}
+
+.square-e6,
+.flipped .square-d3 {
+    transform: translateX(400%) translateY(200%)
+}
+
+.square-e5,
+.flipped .square-d4 {
+    transform: translateX(400%) translateY(300%)
+}
+
+.square-e4,
+.flipped .square-d5 {
+    transform: translateX(400%) translateY(400%)
+}
+
+.square-e3,
+.flipped .square-d6 {
+    transform: translateX(400%) translateY(500%)
+}
+
+.square-e2,
+.flipped .square-d7 {
+    transform: translateX(400%) translateY(600%)
+}
+
+.square-e1,
+.flipped .square-d8 {
+    transform: translateX(400%) translateY(700%)
+}
+
+.square-f8,
+.flipped .square-c1 {
+    transform: translateX(500%) translateY(0%)
+}
+
+.square-f7,
+.flipped .square-c2 {
+    transform: translateX(500%) translateY(100%)
+}
+
+.square-f6,
+.flipped .square-c3 {
+    transform: translateX(500%) translateY(200%)
+}
+
+.square-f5,
+.flipped .square-c4 {
+    transform: translateX(500%) translateY(300%)
+}
+
+.square-f4,
+.flipped .square-c5 {
+    transform: translateX(500%) translateY(400%)
+}
+
+.square-f3,
+.flipped .square-c6 {
+    transform: translateX(500%) translateY(500%)
+}
+
+.square-f2,
+.flipped .square-c7 {
+    transform: translateX(500%) translateY(600%)
+}
+
+.square-f1,
+.flipped .square-c8 {
+    transform: translateX(500%) translateY(700%)
+}
+
+.square-g8,
+.flipped .square-b1 {
+    transform: translateX(600%) translateY(0%)
+}
+
+.square-g7,
+.flipped .square-b2 {
+    transform: translateX(600%) translateY(100%)
+}
+
+.square-g6,
+.flipped .square-b3 {
+    transform: translateX(600%) translateY(200%)
+}
+
+.square-g5,
+.flipped .square-b4 {
+    transform: translateX(600%) translateY(300%)
+}
+
+.square-g4,
+.flipped .square-b5 {
+    transform: translateX(600%) translateY(400%)
+}
+
+.square-g3,
+.flipped .square-b6 {
+    transform: translateX(600%) translateY(500%)
+}
+
+.square-g2,
+.flipped .square-b7 {
+    transform: translateX(600%) translateY(600%)
+}
+
+.square-g1,
+.flipped .square-b8 {
+    transform: translateX(600%) translateY(700%)
+}
+
+.square-h8,
+.flipped .square-a1 {
+    transform: translateX(700%) translateY(0%)
+}
+
+.square-h7,
+.flipped .square-a2 {
+    transform: translateX(700%) translateY(100%)
+}
+
+.square-h6,
+.flipped .square-a3 {
+    transform: translateX(700%) translateY(200%)
+}
+
+.square-h5,
+.flipped .square-a4 {
+    transform: translateX(700%) translateY(300%)
+}
+
+.square-h4,
+.flipped .square-a5 {
+    transform: translateX(700%) translateY(400%)
+}
+
+.square-h3,
+.flipped .square-a6 {
+    transform: translateX(700%) translateY(500%)
+}
+
+.square-h2,
+.flipped .square-a7 {
+    transform: translateX(700%) translateY(600%)
+}
+
+.square-h1,
+.flipped .square-a8 {
+    transform: translateX(700%) translateY(700%)
+}
